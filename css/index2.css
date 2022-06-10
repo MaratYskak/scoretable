@@ -1,0 +1,31 @@
+.scores {
+    display: flex;
+}
+
+.scoresItem {
+    height: 20px;
+    width: 120px;
+}
+  
+.scores_parent {
+
+}
+
+.buttons {
+    display: flex;
+
+    margin-left: 70px;
+
+}
+
+.buttn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.pagenum {
+    padding-top: 30%;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index2.css">
+    <script type="text/javascript" src="css/index2.js"></script>
+    <title>Document</title>
+</head>
+<body onload="onLoad()">
+    <form action="/record" method="get">
+    <div class="scores_parent">
+        <div class="scores">
+            <div class="scoresItem" style="border: solid; width: 50px;">place</div>
+            <div class="scoresItem" style="border: solid; width: 200px;">name</div>
+            <div class="scoresItem" style="border: solid;">score</div>
+            <div class="scoresItem" style="border: solid; width: 200px;">date</div>
+    </div>
+        {{range  .S }}
+        
+        <div class="scores">
+                <div class="scoresItem" style="border: solid; width: 50px;">{{ .Rank }}</div>
+                <div class="scoresItem" style="border: solid; width: 200px;">{{ .Name }}</div>
+                <div class="scoresItem" style="border: solid;">{{ .Score }}</div>
+                <div class="scoresItem" style="border: solid; width: 200px;">{{ .Date }}</div>
+        </div>
+        {{ end }}
+        <div class="buttons">
+            <button value="left" name="btn" class="buttn" id="btnLeft" type="submit" ><</button><div ><h3 id="pagenum" >{{ .Pagenum }}</h3></div><button value="right" name="btn" class="buttn" id="btnRight" type="submit" >></button>
+        </div>
+        <a href="http://localhost:8080/">
+        <div class="knopka" style="border: solid; cursor: pointer; width: 100px; height: 50px">
+            play again
+        </div>
+        </a>
+    </div>
+    <input type="hidden" value="" name="pagenum" id="pginput" />
+</form>
+</body>
+</html>

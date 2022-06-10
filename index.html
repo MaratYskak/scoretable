@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arkanoid</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="css/index.js"></script>
+
+</head>
+
+<body onload="onLoad()" onkeypress="onKeyDown(event)" onkeyup="onKeyUp(event)" ;>
+    <form action="/record" method="post">
+    <div class="menu-bar">
+        <div class="raz">
+            <div class="elem-left">
+                <button class="button" id="gameButton" onclick="this.blur(); mainEventTrigger(this);">Start</button>
+                <button class="button" id="restartButton" onclick="this.blur(); restart();">[R]estart </button>
+            </div>
+            <div class="elem-right">
+                <div>
+                    Score:
+                    <p name="score" id="score">0</p>
+                    <input type="hidden" value="" name="scoreinput" id="hiddeninput" />
+                    <input type="hidden" value="1" name="pagenum" id="pagenum" />
+                </div>
+                <div>
+                    Lives:
+                    <p id="livesGiven">0</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div style="position: absolute; top:20%; left:50%;">
+        
+            <textarea class="textarea" placeholder="имя в таблицу рекордов" id="playername" name="input" required></textarea>
+            <button id="submitbutton" type="submit" >submit</button>
+            
+
+    </div>
+    <p class="gratz" id="message-lose" style="display: none; color: red;">YOU LOSE</p>
+    <p class="gratz" id="message-won" style="display: none; color: white;">YOU WON</p>
+    
+    <div class="field">
+        <div class="blocks-grid" />
+        <div class="plate-row">
+            <div class="plate" />
+        </div>
+        <div class="ball" />
+    </div>
+</form>
+
+</body>
+
+</html>
